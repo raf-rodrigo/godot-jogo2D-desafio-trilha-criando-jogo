@@ -69,61 +69,62 @@ line_spacing = 62.0
 font_size = 30
 
 [node name="TestScene" type="Node2D"]
+position = Vector2(1584, -195)
 
 [node name="Shadows" type="Sprite2D" parent="."]
-position = Vector2(1218, 77)
+position = Vector2(4367, 1383)
 texture = ExtResource("1_c187q")
 
 [node name="TilemapElevation" type="Sprite2D" parent="."]
-position = Vector2(1422, 261)
+position = Vector2(4571, 1567)
 texture = ExtResource("2_na5df")
 
 [node name="TilemapFlat" type="Sprite2D" parent="."]
-position = Vector2(1896, 135)
+position = Vector2(5045, 1441)
 texture = ExtResource("3_ui2nk")
 
 [node name="BridgeAll" type="Sprite2D" parent="."]
-position = Vector2(1703, 411)
+position = Vector2(4852, 1717)
 texture = ExtResource("4_4k1on")
 
 [node name="Water" type="Sprite2D" parent="."]
-position = Vector2(1225, 189)
+position = Vector2(4374, 1495)
 texture = ExtResource("5_rta80")
 
 [node name="Rocks01" type="Sprite2D" parent="."]
-position = Vector2(2715, 54)
+position = Vector2(5864, 1360)
 texture = ExtResource("6_mt8r8")
 
 [node name="Rocks02" type="Sprite2D" parent="."]
-position = Vector2(2720, 135)
+position = Vector2(5869, 1441)
 texture = ExtResource("7_wc2ul")
 
 [node name="Rocks03" type="Sprite2D" parent="."]
-position = Vector2(2724, 241)
+position = Vector2(5873, 1547)
 texture = ExtResource("8_gggfs")
 
 [node name="Rocks04" type="Sprite2D" parent="."]
-position = Vector2(2742, 342)
+position = Vector2(5891, 1648)
 texture = ExtResource("9_14qra")
 
 [node name="Foam" type="Sprite2D" parent="."]
-position = Vector2(2569, 492)
+position = Vector2(5718, 1798)
 texture = ExtResource("10_ggelk")
 
 [node name="Tree" type="Sprite2D" parent="."]
-position = Vector2(1571, 834)
+position = Vector2(4720, 2140)
 texture = ExtResource("11_0rme1")
 
 [node name="HappySheepAll" type="Sprite2D" parent="."]
-position = Vector2(2425, 675)
+position = Vector2(5574, 1981)
 texture = ExtResource("12_ikvxw")
 
 [node name="HappySheepBouncing" type="Sprite2D" parent="."]
-position = Vector2(2294, 846)
+position = Vector2(5443, 2152)
 texture = ExtResource("13_7hbis")
 
 [node name="HappySheepIdle" type="Sprite2D" parent="."]
-position = Vector2(2437, 946)
+position = Vector2(5586, 2252)
 texture = ExtResource("14_t0nmt")
 
 [node name="WarriorBlue" type="Sprite2D" parent="."]
@@ -139,6 +140,7 @@ scale = Vector2(1.85399, 1.85399)
 text = "idle
 "
 label_settings = SubResource("LabelSettings_wt2cj")
+metadata/_edit_use_anchors_ = true
 
 [node name="Label9" type="Label" parent="WarriorBlue"]
 offset_left = -505.0
@@ -149,18 +151,23 @@ scale = Vector2(1.85399, 1.85399)
 text = "0           1          2           3           4           5
 "
 label_settings = SubResource("LabelSettings_wt2cj")
+metadata/_edit_use_anchors_ = true
 
 [node name="Label10" type="Label" parent="WarriorBlue"]
+anchors_preset = -1
+anchor_left = -0.0182292
+anchor_right = 0.00260417
 offset_left = -655.0
 offset_top = -709.0
 offset_right = -632.0
 offset_bottom = 64.0
 scale = Vector2(1.85399, 1.85399)
-text = "01234567
-"
+text = "01234567"
 label_settings = SubResource("LabelSettings_wt2cj")
-autowrap_mode = 3
-visible_ratio = -0.111111
+autowrap_mode = 2
+visible_characters = 0
+visible_ratio = 0.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="WarriorBlue"]
 offset_left = 607.0
@@ -171,6 +178,7 @@ scale = Vector2(1.85399, 1.85399)
 text = "running
 "
 label_settings = SubResource("LabelSettings_wt2cj")
+metadata/_edit_use_anchors_ = true
 
 [node name="Label3" type="Label" parent="WarriorBlue"]
 offset_left = 607.0
@@ -181,6 +189,7 @@ scale = Vector2(1.85399, 1.85399)
 text = "attack_side_1
 "
 label_settings = SubResource("LabelSettings_wt2cj")
+metadata/_edit_use_anchors_ = true
 
 [node name="Label4" type="Label" parent="WarriorBlue"]
 offset_left = 607.0
@@ -191,6 +200,7 @@ scale = Vector2(1.85399, 1.85399)
 text = "attack_side_2
 "
 label_settings = SubResource("LabelSettings_wt2cj")
+metadata/_edit_use_anchors_ = true
 
 [node name="Label5" type="Label" parent="WarriorBlue"]
 offset_left = 607.0
@@ -201,6 +211,7 @@ scale = Vector2(1.85399, 1.85399)
 text = "attack_down_1
 "
 label_settings = SubResource("LabelSettings_wt2cj")
+metadata/_edit_use_anchors_ = true
 
 [node name="Label6" type="Label" parent="WarriorBlue"]
 offset_left = 607.0
@@ -211,6 +222,7 @@ scale = Vector2(1.85399, 1.85399)
 text = "attack_down_2
 "
 label_settings = SubResource("LabelSettings_wt2cj")
+metadata/_edit_use_anchors_ = true
 
 [node name="Label7" type="Label" parent="WarriorBlue"]
 offset_left = 607.0
@@ -221,6 +233,7 @@ scale = Vector2(1.85399, 1.85399)
 text = "attack_up_1
 "
 label_settings = SubResource("LabelSettings_wt2cj")
+metadata/_edit_use_anchors_ = true
 
 [node name="Label8" type="Label" parent="WarriorBlue"]
 offset_left = 607.0
@@ -231,193 +244,195 @@ scale = Vector2(1.85399, 1.85399)
 text = "attack_up_2
 "
 label_settings = SubResource("LabelSettings_wt2cj")
+metadata/_edit_use_anchors_ = true
 
 [node name="Dead" type="Sprite2D" parent="."]
-position = Vector2(3746, 184)
+position = Vector2(6895, 1490)
 texture = ExtResource("16_kyx7i")
 
 [node name="ArcherRed" type="Sprite2D" parent="."]
-position = Vector2(4237, -670)
+position = Vector2(5997, 466)
 texture = ExtResource("17_6mymr")
 
 [node name="PawnRed" type="Sprite2D" parent="."]
-position = Vector2(2852, -569)
+position = Vector2(4612, 567)
 texture = ExtResource("18_kmnpr")
 
 [node name="BarrelRed" type="Sprite2D" parent="."]
-position = Vector2(4626, 386)
+position = Vector2(7775, 1692)
 texture = ExtResource("19_g5wu4")
 
 [node name="TntRed" type="Sprite2D" parent="."]
-position = Vector2(3625, 1134)
+position = Vector2(6774, 2440)
 texture = ExtResource("20_xxvtj")
 
 [node name="TorchRed" type="Sprite2D" parent="."]
-position = Vector2(4936, 1334)
+position = Vector2(8085, 2640)
 texture = ExtResource("21_6u2l6")
 
 [node name="GIdle" type="Sprite2D" parent="."]
-position = Vector2(3398, 467)
+position = Vector2(6547, 1773)
 texture = ExtResource("22_wuvor")
 
 [node name="GIdle(noShadow)" type="Sprite2D" parent="."]
-position = Vector2(3508, 460)
+position = Vector2(6657, 1766)
 texture = ExtResource("23_xig0w")
 
 [node name="MIdle" type="Sprite2D" parent="."]
-position = Vector2(3627, 458)
+position = Vector2(6776, 1764)
 texture = ExtResource("24_tnu0b")
 
 [node name="MIdle(noShadow)" type="Sprite2D" parent="."]
-position = Vector2(3753, 460)
+position = Vector2(6902, 1766)
 texture = ExtResource("25_k583i")
 
 [node name="MSpawn" type="Sprite2D" parent="."]
-position = Vector2(3399, 620)
+position = Vector2(6548, 1926)
 texture = ExtResource("26_5manm")
 
 [node name="WIdle" type="Sprite2D" parent="."]
-position = Vector2(3865, 444)
+position = Vector2(7014, 1750)
 texture = ExtResource("27_lrhbx")
 
 [node name="WIdle(noShadow)" type="Sprite2D" parent="."]
-position = Vector2(3953, 436)
+position = Vector2(7102, 1742)
 texture = ExtResource("28_qthv5")
 
 [node name="WSpawn" type="Sprite2D" parent="."]
-position = Vector2(3399, 741)
+position = Vector2(6548, 2047)
 texture = ExtResource("29_58f0h")
 
 [node name="Explosions" type="Sprite2D" parent="."]
-position = Vector2(3779, 848)
+position = Vector2(6928, 2154)
 texture = ExtResource("30_8c8ts")
 
 [node name="01" type="Sprite2D" parent="."]
-position = Vector2(3370, 364)
+position = Vector2(6519, 1670)
 texture = ExtResource("31_cj3ri")
 
 [node name="02" type="Sprite2D" parent="."]
-position = Vector2(3469, 350)
+position = Vector2(6618, 1656)
 texture = ExtResource("32_37x3q")
 
 [node name="03" type="Sprite2D" parent="."]
-position = Vector2(3570, 370)
+position = Vector2(6719, 1676)
 texture = ExtResource("33_qvvoy")
 
 [node name="04" type="Sprite2D" parent="."]
-position = Vector2(3711, 359)
+position = Vector2(6860, 1665)
 texture = ExtResource("34_mypgc")
 
 [node name="05" type="Sprite2D" parent="."]
-position = Vector2(3782, 367)
+position = Vector2(6931, 1673)
 texture = ExtResource("35_jl1f4")
 
 [node name="06" type="Sprite2D" parent="."]
-position = Vector2(3846, 367)
+position = Vector2(6995, 1673)
 texture = ExtResource("36_ce3y8")
 
 [node name="07" type="Sprite2D" parent="."]
-position = Vector2(3926, 360)
+position = Vector2(7075, 1666)
 texture = ExtResource("37_7upog")
 
 [node name="08" type="Sprite2D" parent="."]
-position = Vector2(4004, 365)
+position = Vector2(7153, 1671)
 texture = ExtResource("38_grudl")
 
 [node name="09" type="Sprite2D" parent="."]
-position = Vector2(4101, 364)
+position = Vector2(7250, 1670)
 texture = ExtResource("39_k4rds")
 
 [node name="10" type="Sprite2D" parent="."]
-position = Vector2(4027, 454)
+position = Vector2(7176, 1760)
 texture = ExtResource("40_unm2s")
 
 [node name="11" type="Sprite2D" parent="."]
-position = Vector2(4083, 459)
+position = Vector2(7232, 1765)
 texture = ExtResource("41_0y7ga")
 
 [node name="12" type="Sprite2D" parent="."]
-position = Vector2(3886, 554)
+position = Vector2(7035, 1860)
 texture = ExtResource("42_slf84")
 
 [node name="13" type="Sprite2D" parent="."]
-position = Vector2(3950, 549)
+position = Vector2(7099, 1855)
 texture = ExtResource("43_wlu5s")
 
 [node name="14" type="Sprite2D" parent="."]
-position = Vector2(4021, 559)
+position = Vector2(7170, 1865)
 texture = ExtResource("44_vpbcc")
 
 [node name="15" type="Sprite2D" parent="."]
-position = Vector2(4078, 544)
+position = Vector2(7227, 1850)
 texture = ExtResource("45_2q4p5")
 
 [node name="16" type="Sprite2D" parent="."]
-position = Vector2(4145, 567)
+position = Vector2(7294, 1873)
 texture = ExtResource("46_j3vjx")
 
 [node name="17" type="Sprite2D" parent="."]
-position = Vector2(3900, 655)
+position = Vector2(7049, 1961)
 texture = ExtResource("47_7exqo")
 
 [node name="18" type="Sprite2D" parent="."]
-position = Vector2(4011, 646)
+position = Vector2(7160, 1952)
 texture = ExtResource("48_xnk7x")
 
 [node name="Fire" type="Sprite2D" parent="."]
-position = Vector2(4716, 826)
+position = Vector2(7865, 2132)
 texture = ExtResource("49_j4rra")
 
 [node name="Circle01" type="Sprite2D" parent="."]
-position = Vector2(5341, -273)
+position = Vector2(6466, -1836)
 texture = ExtResource("50_wv65k")
 
 [node name="Circle02" type="Sprite2D" parent="."]
-position = Vector2(5805, -267)
+position = Vector2(7036, -1883)
 texture = ExtResource("51_gajjc")
 
 [node name="Circle03" type="Sprite2D" parent="."]
-position = Vector2(6294, -273)
+position = Vector2(7525, -1889)
 texture = ExtResource("52_p3t4o")
 
 [node name="Circle04" type="Sprite2D" parent="."]
-position = Vector2(5359, 207)
+position = Vector2(6484, -1356)
 texture = ExtResource("53_o0lr1")
 
 [node name="Circle05" type="Sprite2D" parent="."]
-position = Vector2(5853, 213)
+position = Vector2(7084, -1403)
 texture = ExtResource("54_kdfi1")
 
 [node name="Light02" type="Sprite2D" parent="."]
-position = Vector2(6288, 249)
+position = Vector2(7519, -1367)
 texture = ExtResource("55_qg56y")
 
 [node name="Light03" type="Sprite2D" parent="."]
-position = Vector2(5386, 623)
+position = Vector2(6511, -940)
 texture = ExtResource("56_52esd")
 
 [node name="Light01" type="Sprite2D" parent="."]
-position = Vector2(5874, 644)
+position = Vector2(7105, -972)
 texture = ExtResource("57_32jyf")
 
 [node name="Magic01" type="Sprite2D" parent="."]
-position = Vector2(6348, 695)
+position = Vector2(7564, -694)
 texture = ExtResource("58_ko77o")
 
 [node name="Magic02" type="Sprite2D" parent="."]
-position = Vector2(5841, 1112)
+position = Vector2(7057, -277)
 texture = ExtResource("59_u0w12")
 
 [node name="Magic03" type="Sprite2D" parent="."]
-position = Vector2(6369, 1151)
+position = Vector2(7585, -238)
 texture = ExtResource("60_1i43n")
 
 [node name="Magic04" type="Sprite2D" parent="."]
-position = Vector2(5826, 1585)
+position = Vector2(7042, 196)
 texture = ExtResource("61_4fgdl")
 
 [node name="Magic05" type="Sprite2D" parent="."]
-position = Vector2(6405, 1618)
+position = Vector2(7621, 229)
 texture = ExtResource("62_j3x8y")
 
 [node name="Player" parent="." instance=ExtResource("63_exf5r")]
+position = Vector2(-1285, 561)
