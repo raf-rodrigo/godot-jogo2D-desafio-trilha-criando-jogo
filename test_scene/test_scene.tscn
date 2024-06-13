@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://dget5byfgcinf"]
+[gd_scene load_steps=66 format=3 uid="uid://dget5byfgcinf"]
 
 [ext_resource type="Texture2D" uid="uid://drpklgo5w3p2i" path="res://addons/Tiny Swords/Terrain/Ground/Shadows.png" id="1_c187q"]
 [ext_resource type="Texture2D" uid="uid://p2a8134wqccf" path="res://addons/Tiny Swords/Terrain/Ground/Tilemap_Elevation.png" id="2_na5df"]
@@ -63,13 +63,14 @@
 [ext_resource type="Texture2D" uid="uid://cn02pa7csd5lq" path="res://addons/Kenneys's Particle Pack/magic_04.png" id="61_4fgdl"]
 [ext_resource type="Texture2D" uid="uid://b50e47gdh4nld" path="res://addons/Kenneys's Particle Pack/magic_05.png" id="62_j3x8y"]
 [ext_resource type="PackedScene" uid="uid://bjn7voiwy3rc3" path="res://player/player.tscn" id="63_exf5r"]
+[ext_resource type="PackedScene" uid="uid://ck0crharhexa3" path="res://enemies/pawn.tscn" id="64_0l1pp"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wt2cj"]
 line_spacing = 62.0
 font_size = 30
 
 [node name="TestScene" type="Node2D"]
-position = Vector2(1584, -195)
+position = Vector2(1169, 29)
 
 [node name="Shadows" type="Sprite2D" parent="."]
 position = Vector2(4367, 1383)
@@ -435,4 +436,19 @@ position = Vector2(7621, 229)
 texture = ExtResource("62_j3x8y")
 
 [node name="Player" parent="." instance=ExtResource("63_exf5r")]
-position = Vector2(-1285, 561)
+position = Vector2(-988, 262)
+
+[node name="Pawn" parent="." instance=ExtResource("64_0l1pp")]
+position = Vector2(-574, 202)
+
+[node name="Pawn2" parent="." instance=ExtResource("64_0l1pp")]
+position = Vector2(-293, 409)
+
+[node name="Pawn3" parent="." instance=ExtResource("64_0l1pp")]
+position = Vector2(-1121, 306)
+
+[node name="Pawn4" parent="." instance=ExtResource("64_0l1pp")]
+position = Vector2(-1107, 60)
+
+[node name="Pawn5" parent="." instance=ExtResource("64_0l1pp")]
+position = Vector2(-1297, 712)
