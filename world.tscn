@@ -1,5 +1,6 @@
-[gd_scene load_steps=51 format=3 uid="uid://wvd5fgkr7aai"]
+[gd_scene load_steps=53 format=3 uid="uid://wvd5fgkr7aai"]
 
+[ext_resource type="Script" path="res://world.gd" id="1_40elx"]
 [ext_resource type="PackedScene" uid="uid://bjn7voiwy3rc3" path="res://player/player.tscn" id="1_dt0hn"]
 [ext_resource type="Texture2D" uid="uid://shmp7axrsata" path="res://addons/Tiny Swords/Deco/01.png" id="2_flvgo"]
 [ext_resource type="PackedScene" uid="uid://bptdwgg6cfimy" path="res://sistems/mob_spawner.tscn" id="2_wuhpt"]
@@ -26,6 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://d16qkkhxv4l6b" path="res://decor/decor.tscn" id="21_kadt4"]
 [ext_resource type="PackedScene" uid="uid://t0wiygbhwnju" path="res://decor/stones.tscn" id="25_kewit"]
 [ext_resource type="Script" path="res://sistems/difficulty_system.gd" id="26_pin40"]
+[ext_resource type="PackedScene" uid="uid://buqae3nf506k2" path="res://ui/gamer_over_ui.tscn" id="27_7pe3p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fgr46"]
 texture = ExtResource("5_dws4o")
@@ -198,8 +200,11 @@ size = Vector2(12768, 1927)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pweiu"]
 size = Vector2(905, 6492.5)
 
-[node name="World" type="Node2D"]
+[node name="World" type="Node2D" node_paths=PackedStringArray("game_ui")]
 y_sort_enabled = true
+script = ExtResource("1_40elx")
+game_ui = NodePath("GamerUI")
+gamer_over_ui_template = ExtResource("27_7pe3p")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -226,9 +231,10 @@ position = Vector2(216, -128)
 
 [node name="Player" parent="." instance=ExtResource("1_dt0hn")]
 position = Vector2(295, 283)
+health = 10.0
 
 [node name="RemoteTransform2D-Camara" type="RemoteTransform2D" parent="Player"]
-remote_path = NodePath("../../Camera2D")
+remote_path = NodePath("../Camera2D")
 update_rotation = false
 update_scale = false
 
@@ -237,6 +243,8 @@ position = Vector2(-36, -45)
 remote_path = NodePath("../../MobSpawner")
 update_rotation = false
 update_scale = false
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
 
 [node name="DifficultySystem" type="Node" parent="." node_paths=PackedStringArray("mob_spawner")]
 script = ExtResource("26_pin40")
@@ -247,11 +255,6 @@ break_intensity = 0.33
 
 [node name="MobSpawner" parent="." instance=ExtResource("2_wuhpt")]
 position = Vector2(259, 238)
-
-[node name="GamerUI" parent="." instance=ExtResource("3_40mqh")]
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(295, 283)
 
 [node name="WorldLimit" type="StaticBody2D" parent="."]
 collision_layer = 9
@@ -292,3 +295,5 @@ frame_progress = 0.756235
 position = Vector2(-1561, -1055)
 scale = Vector2(3.25034, 3.25034)
 frame_progress = 0.756235
+
+[node name="GamerUI" parent="." instance=ExtResource("3_40mqh")]

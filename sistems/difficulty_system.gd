@@ -10,6 +10,10 @@ extends Node
 var time: float = 0.0
 
 func _process(delta: float) ->void:
+	# Ignorar o gamer over
+	if GameManager.is_gamer_over: return
+	
+	# Inclementar temporizador
 	time += delta
 	
 	var spawn_rate = initial_spawn_rate + spawn_rate_per_minute * (time / 60)

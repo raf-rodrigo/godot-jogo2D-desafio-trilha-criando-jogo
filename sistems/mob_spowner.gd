@@ -9,6 +9,9 @@ var mobs_per_minute: float = 30.0
 var cooldown: float = 0.0
 
 func _process(delta: float) ->void:
+	# Ignorar o gamer over
+	if GameManager.is_gamer_over: return
+	
 	# Temporizador(cooldown)
 	cooldown -= delta
 	if cooldown > 0: return

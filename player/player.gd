@@ -39,6 +39,7 @@ signal gold_collect(value: int)
 
 func _ready():
 	GameManager.player = self
+	meat_collect.connect(func(): GameManager.meat_count += 1)
 
 func _process(delta: float) -> void:
 	# Injetando a posição do meu player
@@ -182,6 +183,8 @@ func damage(amount: int) -> void:
 		die()
 
 func die() -> void:
+	GameManager.end_game()
+	
 	if death_prefab:
 		var death_object = death_prefab.instantiate()
 		death_object.position = position

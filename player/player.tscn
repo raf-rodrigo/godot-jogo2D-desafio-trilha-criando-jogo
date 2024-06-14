@@ -267,7 +267,7 @@ bg_color = Color(1, 0, 0, 1)
 y_sort_enabled = true
 motion_mode = 1
 script = ExtResource("1_oymcc")
-ritual_interval = 15.0
+ritual_interval = 60.0
 ritual_scene = ExtResource("2_8eypx")
 death_prefab = ExtResource("2_7qnid")
 

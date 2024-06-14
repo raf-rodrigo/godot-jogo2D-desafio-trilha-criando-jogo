@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1x8xgl7y18fc"]
+
+[ext_resource type="PackedScene" uid="uid://buqae3nf506k2" path="res://ui/gamer_over_ui.tscn" id="1_oreob"]
+
+[node name="TestGameOverUi" type="Node2D"]
+
+[node name="GamerOverUI" parent="." instance=ExtResource("1_oreob")]
