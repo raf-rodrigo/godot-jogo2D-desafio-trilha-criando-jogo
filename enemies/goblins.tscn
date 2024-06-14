@@ -1,8 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://cjbrwj8g3tqhi"]
+[gd_scene load_steps=15 format=3 uid="uid://cjbrwj8g3tqhi"]
 
 [ext_resource type="Script" path="res://enemies/enemy.gd" id="1_jav78"]
 [ext_resource type="PackedScene" uid="uid://bv53go8x6mdak" path="res://misc/skull.tscn" id="2_2oxbc"]
+[ext_resource type="PackedScene" uid="uid://bdkuuu28502fo" path="res://misc/meat.tscn" id="3_05ks4"]
 [ext_resource type="Texture2D" uid="uid://pcbjbnkdxq3o" path="res://addons/Tiny Swords/Factions/Goblins/Troops/Torch/Red/Torch_Red.png" id="3_rtxst"]
+[ext_resource type="PackedScene" uid="uid://ckxi0htg48j18" path="res://misc/golden_meat.tscn" id="4_dhu70"]
 [ext_resource type="Script" path="res://enemies/behaviors/follow_player.gd" id="4_e3gfj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_osuao"]
@@ -56,8 +58,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l8cbv"]
-radius = 19.0
-height = 60.0
+radius = 9.41517
+height = 34.7223
 
 [node name="Goblins" type="CharacterBody2D" groups=["enemies"]]
 light_mask = 0
@@ -66,6 +68,8 @@ motion_mode = 1
 script = ExtResource("1_jav78")
 health = 10
 death_prefab = ExtResource("2_2oxbc")
+drop_items = Array[PackedScene]([ExtResource("3_05ks4"), ExtResource("4_dhu70")])
+drop_chances = Array[float]([0.9, 0.1])
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -20)
@@ -75,7 +79,8 @@ frame = 4
 frame_progress = 0.449954
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -23)
+position = Vector2(2, 6)
+rotation = -1.59568
 shape = SubResource("CapsuleShape2D_l8cbv")
 debug_color = Color(0, 0.6, 0.701961, 0.231373)
 

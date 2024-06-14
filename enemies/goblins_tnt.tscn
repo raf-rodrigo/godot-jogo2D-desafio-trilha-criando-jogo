@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://dpenulwc8pftc"]
+[gd_scene load_steps=14 format=3 uid="uid://dpenulwc8pftc"]
 
 [ext_resource type="Script" path="res://enemies/enemy.gd" id="1_5p5xr"]
 [ext_resource type="PackedScene" uid="uid://bv53go8x6mdak" path="res://misc/skull.tscn" id="2_hg8wj"]
+[ext_resource type="PackedScene" uid="uid://bdkuuu28502fo" path="res://misc/meat.tscn" id="3_dyhud"]
 [ext_resource type="Texture2D" uid="uid://btfhqn0asee7e" path="res://addons/Tiny Swords/Factions/Goblins/Troops/TNT/Red/TNT_Red.png" id="3_l8drt"]
 [ext_resource type="Script" path="res://enemies/behaviors/follow_player.gd" id="4_kblyi"]
 
@@ -56,7 +57,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l8cbv"]
-radius = 30.0
+radius = 14.6667
 height = 60.0
 
 [node name="GoblinsTnt" type="CharacterBody2D" groups=["enemies"]]
@@ -66,6 +67,8 @@ motion_mode = 1
 script = ExtResource("1_5p5xr")
 health = 3
 death_prefab = ExtResource("2_hg8wj")
+drop_chance = 0.05
+drop_items = Array[PackedScene]([ExtResource("3_dyhud")])
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -20)
@@ -75,7 +78,8 @@ frame = 2
 frame_progress = 0.0528334
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-4, -21)
+position = Vector2(-2.66667, 1.33333)
+rotation = 1.58336
 shape = SubResource("CapsuleShape2D_l8cbv")
 debug_color = Color(0, 0.6, 0.701961, 0.231373)
 

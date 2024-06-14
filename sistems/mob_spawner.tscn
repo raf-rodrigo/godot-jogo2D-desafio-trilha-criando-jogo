@@ -7,22 +7,23 @@
 
 [sub_resource type="Curve2D" id="Curve2D_8n8ew"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -249, -424, 0, 0, 0, 0, 1074, -407, 0, 0, 0, 0, 1113, 534, 0, 0, 0, 0, -327, 530, 0, 0, 0, 0, -251, -424, 0, 0, 0, 0, -249, -420)
+"points": PackedVector2Array(0, 0, 0, 0, -382.215, -396, 0, 0, 0, 0, 1229.13, -295, 0, 0, 0, 0, 1332.32, 810, 0, 0, 0, 0, 1144.23, 1251, 0, 0, 0, 0, 500.238, 1337, 0, 0, 0, 0, -465.104, 1274, 0, 0, 0, 0, -646.221, 277, 0, 0, 0, 0, -387.953, -390)
 }
-point_count = 6
+point_count = 8
 
 [node name="MobSpawner" type="Node2D"]
-position = Vector2(193, 302)
 script = ExtResource("1_tb6tl")
 creatures = Array[PackedScene]([ExtResource("2_xafw2"), ExtResource("3_bds5v"), ExtResource("4_dyjcn")])
 
 [node name="Path2D" type="Path2D" parent="."]
+position = Vector2(217.811, -257)
+scale = Vector2(2.17079, 1)
 curve = SubResource("Curve2D_8n8ew")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
 unique_name_in_owner = true
-position = Vector2(-249, -424)
-rotation = 0.0128489
+position = Vector2(-382.215, -396)
+rotation = 0.0625986
 
 [node name="_Timer_275650" type="Timer" parent="Path2D/PathFollow2D"]
 wait_time = 0.2
