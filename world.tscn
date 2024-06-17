@@ -231,7 +231,6 @@ position = Vector2(216, -128)
 
 [node name="Player" parent="." instance=ExtResource("1_dt0hn")]
 position = Vector2(295, 283)
-health = 10.0
 
 [node name="RemoteTransform2D-Camara" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../Camera2D")
